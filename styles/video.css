@@ -1,0 +1,146 @@
+
+.grid-layout{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+@media (max-width: 750px){
+  .grid-layout{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px){
+  .grid-layout{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px){
+  .grid-layout{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.thumbnail{
+  cursor: pointer;
+  width: 100%;
+}
+
+.thumbnail-row{
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.video-time{
+  border-radius: 2px;
+  background-color: black;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 12px;
+  right: 4px;
+  padding: 3px 4px 3px 4px;
+}
+
+.time{
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+}
+
+.channel-image{
+  display: inline-block;
+  margin-top: 12px;
+  width: 36px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.video-title{
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  line-height: 20px;
+}
+
+.channel-name,
+.video-stats{
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-info-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.channel-name{
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+
+.channel-picture{
+  width: 36px;
+  border-radius: 18px;
+}
+
+.channel-profile{
+  position: relative;
+  height: 36px;
+  width: 36px;
+  cursor: pointer;
+}
+
+.hover-channel-info{
+  width: 200px;
+  pointer-events: none;
+  border-radius: 5px;
+  column-gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  position: absolute;
+  bottom: -78px;
+  left: 0;
+  display: flex;
+  padding: 10px 15px 10px 15px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.channel-profile:hover .hover-channel-info{
+  opacity: 1;
+}
+
+.hover-channel-info img{
+  width: 45px;
+  border-radius: 25px;
+}
+
+.hover-channel-picture{
+  display: flex;
+  align-items: center;
+}
+
+.hover-channel-name-and-subscribers{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2px;
+}
+
+.hover-channel-name{
+  font-weight: bold;
+}
+
+.hover-channel-subscribers{
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
