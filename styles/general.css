@@ -13,6 +13,7 @@ p{
 }
 
 a{
+    pointer-events: none;
     text-decoration: none;
     color: black;
 }
